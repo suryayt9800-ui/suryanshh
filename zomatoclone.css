@@ -1,0 +1,185 @@
+
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        color: #1c1c1c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+ 
+    
+    .header {
+        text-align: center;
+        margin-bottom: 55px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .title {
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6b7280;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+        content: "";
+        height: 1px;
+        width: 60px;
+        background-color: #e5e7eb;
+        margin: 0 15px;
+    }
+
+   
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+        width: 100%;
+    }
+
+    
+    .card {
+        border-radius: 20px;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid rgba(0,0,0,0.03); 
+        cursor: pointer; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+
+    .card:hover {
+        transform: translateY(-8px); 
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); 
+    }
+
+    
+    .card.zomato { background: linear-gradient(180deg, #ffe4e6 0%, #ffffff 70%); }
+    .card.blinkit { background: linear-gradient(180deg, #fef3c7 0%, #ffffff 70%); }
+    .card.district { background: linear-gradient(180deg, #e0e7ff 0%, #ffffff 70%); }
+    .card.hyperpure { background: linear-gradient(180deg, #ffe4e6 0%, #ffffff 70%); }
+
+    
+    .logo-box {
+        width: 130px;
+        height: 130px;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    
+    .card:hover .logo-box {
+        transform: scale(1.03);
+    }
+
+    
+    .logo-zomato {
+        background-color: #E23744;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .logo-blinkit {
+        background-color: #F8CB46;
+        color: black;
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+    .logo-blinkit span {
+        color: #0c831f; 
+    }
+
+    .logo-district {
+        background-color: #6A32C9;
+        color: white;
+        position: relative;
+    }
+    .district-text {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+    .district-sub {
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-top: 4px;
+    }
+
+    .logo-hyperpure {
+        background-color: #E23744;
+        color: white;
+    }
+
+    
+    .hyperpure-icon {
+        width: 60px;
+        height: 60px;
+        fill: white;
+    }
+
+    
+    .card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #1f2937;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+        color: #6b7280;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    
+    @media (max-width: 992px) {
+        .cards-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cards-container {
+            grid-template-columns: 1fr;
+        }
+        .title {
+            font-size: 3rem;
+        }
+    }
